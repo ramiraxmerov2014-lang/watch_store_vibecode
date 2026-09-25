@@ -1,0 +1,39 @@
+plugins { id 'com.android.application' }
+android {
+    namespace 'com.watchprogram.app'
+    compileSdk 33
+    defaultConfig {
+        applicationId "com.watchprogram.app"
+        minSdk 21
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+    }
+}
+dependencies {
+
+Как это сделать, чтобы точно сработало:
+
+Так как перетаскивание папок у тебя глючит, сделаем самый надежный способ — «Ручное создание структуры».
+
+1. Нажми кнопку Add file $\rightarrow$ Create new file.
+2. В поле имени файла (сверху) напиши:
+   app/build.gradle
+   (Важно: напиши слово app, потом слэш /, а потом build.gradle. Тогда GitHub сам создаст папку app и положит файл в неё).
+3. В поле для кода вставь этот текст:
+plugins { id 'com.android.application' }
+android {
+    namespace 'com.watchprogram.app'
+    compileSdk 33
+    defaultConfig {
+        applicationId "com.watchprogram.app"
+        minSdk 21
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+    }
+}
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+}
